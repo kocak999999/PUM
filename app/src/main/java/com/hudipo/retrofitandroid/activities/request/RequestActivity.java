@@ -50,6 +50,9 @@ public class RequestActivity extends AppCompatActivity {
     private int mYear, mMonth, mDay, mHour, mMinute;
     Calendar c;
     SimpleDateFormat df2;
+
+    String str_emp_name;
+    String str_sp_emp_dep;
     String strtgl;
     String strtgl2;
     List<Department> listDepartment;
@@ -153,7 +156,15 @@ public class RequestActivity extends AppCompatActivity {
         btn_next_request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                str_emp_name = tv_emp_name_request.getText().toString();
+                str_sp_emp_dep = "HRD";
+
                 Intent intent = new Intent(RequestActivity.this, Request2Activity.class);
+                intent.putExtra("kirimnama",str_emp_name);
+                intent.putExtra("kiridept",str_sp_emp_dep);
+                intent.putExtra("kirimtanggal1",strtgl);
+                intent.putExtra("kirimtanggal2",strtgl2);
+
                 startActivity(intent);
             }
         });
