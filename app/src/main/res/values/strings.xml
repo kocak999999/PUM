@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PUM</string>
+    <string name="emp_name">Alex Hunter</string>
+    <string name="emp_poss">Chief Executive Officer</string>
+    <string name="emp_nik">2001616888</string>
+    <!--TITLE-->
+    <string name="request_title">REQUEST</string>
+    <string name="approval_title">APPROVAL</string>
+    <string name="report_title">REPORT</string>
+    <string name="inbox_title">INBOX</string>
+    <string name="responsibility_title">RESPONSIBILITY</string>
+    <string name="setting_title">SETTING</string>
+    <!--SUBTITLE-->
+    <string name="subtitle_employee">EMPLOYEE</string>
+    <string name="subtitle_document">DOCUMENT</string>
+    <string name="subtitle_fund">FUND</string>
+    <string name="subtitle_doc_detail">DOCUMENT DETAIL</string>
+
+
+    <string-array name="reff_doc">
+        <item>Purchase Order (PO)</item>
+        <item>Surat Pesanan (SP)</item>
+        <item>Permintaan Pembelian (PP)</item>
+    </string-array>
+
+    <string-array name="currency">
+        <item>IDR</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>CNY</item>
+        <item>SGD</item>
+    </string-array>
+
+    <string-array name="trx_type">
+        <item>Biaya Perjalanan Dinas</item>
+        <item>Perlangkapan Karyawan</item>
+        <item>Perlengkapan Dasar Karyawan</item>
+        <item>Perlengkapan DC</item>
+        <item>Perlengkapan Toko</item>
+    </string-array>
+</resources>

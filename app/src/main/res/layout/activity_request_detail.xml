@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapps2"
+    android:orientation="vertical"
+    tools:context=".activities.request.RequestDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/title_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lemon_milk"
+            android:gravity="center"
+            android:text="@string/request_title"
+            android:textColor="@color/colorHint"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lemon_milk_light"
+            android:gravity="center"
+            android:text="@string/subtitle_doc_detail"
+            android:textColor="@color/colorHint"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_below="@id/title_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="3">
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bginput6"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lemon_milk_light"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="@string/subtitle_employee"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_emp_name_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tv_emp_dep_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Dep"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tv_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Start Date"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="End Date"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bginput6"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lemon_milk_light"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="@string/request_title"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" /><TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:text="Emp Name"
+                    android:paddingRight="18dp"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bginput6"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lemon_milk_light"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:text="@string/request_title"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingStart="24dp"
+                        android:paddingLeft="18dp"
+                        android:text="Emp Name"
+                        android:paddingRight="18dp"
+                        android:textColor="@color/colorHint"
+                        android:textSize="18sp" /><TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:text="Emp Name"
+                    android:paddingRight="18dp"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:background="@drawable/bginput6"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="8dp">-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:fontFamily="@font/lemon_milk_light"-->
+    <!--android:paddingStart="16dp"-->
+    <!--android:text="@string/subtitle_employee"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_emp_name_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Emp Name"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_emp_dep_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Department"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_emp_date_start_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Start Date"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_emp_date_end_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="End Date"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:background="@drawable/bginput6"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="8dp">-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:fontFamily="@font/lemon_milk_light"-->
+    <!--android:paddingStart="16dp"-->
+    <!--android:text="@string/subtitle_doc_detail"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_reff_doc_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Reff. Doc"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_doc_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Document detail"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:background="@drawable/bginput6"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="8dp">-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:fontFamily="@font/lemon_milk_light"-->
+    <!--android:paddingStart="16dp"-->
+    <!--android:text="@string/subtitle_fund"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_trx_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Trx Type"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_trx_desc_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Trx Desc"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_amount_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="Amount"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_upload_file_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="2dp"-->
+    <!--android:paddingStart="36dp"-->
+    <!--android:text="File Uploaded"-->
+    <!--android:textColor="@color/colorHint"-->
+    <!--android:textSize="22dp" />-->
+
+
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+    <LinearLayout
+
+        android:id="@+id/bottom_page"
+        android:layout_below="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/bginput"
+            android:text="Submit"
+            android:textColor="@color/colorHint"
+
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/bginput4"
+            android:text="Cancel"
+            android:textColor="@color/colorHint" />
+    </LinearLayout>
+
+
+</RelativeLayout>
