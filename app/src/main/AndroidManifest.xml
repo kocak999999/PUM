@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.request.RequestDetailActivity"></activity>
+        <activity android:name=".activities.approval.ApprovalActivity"></activity>
+        <activity android:name=".activities.request.RequestDetailActivity" />
         <activity android:name=".activities.request.Request3Activity" />
         <activity android:name=".activities.request.Request2Activity" />
         <activity android:name=".activities.RegisterActivity" />
