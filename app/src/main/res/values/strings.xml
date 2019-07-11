@@ -16,6 +16,16 @@
     <string name="subtitle_fund">FUND</string>
     <string name="subtitle_doc_detail">DOCUMENT DETAIL</string>
 
+    <!--approval tag-->
+    <string name="rcv_approval1">Pum Number :</string>
+    <string name="rcv_approval2">Name :</string>
+    <string name="rcv_approval3">Amount :</string>
+
+    <!--inbox tag-->
+    <string name="rcv_inbox1">Reference Code :</string>
+    <string name="rcv_inbox2">Verification Code :</string>
+    <string name="txt_logout">Logout</string>
+
 
     <string-array name="reff_doc">
         <item>Purchase Order (PO)</item>

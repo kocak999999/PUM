@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgapps2"
-    tools:context=".activities.approval.ApprovalActivity">
+    tools:context=".activities.inbox.InboxActivity">
 
     <LinearLayout
         android:id="@+id/title_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="18dp"
-        android:orientation="vertical">
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lemon_milk"
             android:gravity="center"
-            android:text="@string/approval_title"
+            android:text="@string/inbox_title"
             android:textColor="@color/colorHint"
             android:textSize="32sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcv_approval"
+        android:id="@+id/rcv_inbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
@@ -35,4 +35,4 @@
 
     </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

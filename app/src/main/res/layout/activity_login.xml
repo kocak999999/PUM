@@ -11,10 +11,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="48dp"
-        app:srcCompat="@mipmap/ic_icon_logo_pum"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@mipmap/ic_icon_logo_pum_idm"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

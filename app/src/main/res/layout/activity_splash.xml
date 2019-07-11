@@ -19,12 +19,12 @@
 
     <ImageView
         android:id="@+id/logoPum"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:src="@mipmap/ic_icon_logo_pum"
+        android:src="@mipmap/ic_icon_logo_pum_idm"
         app:layout_constraintBottom_toBottomOf="@+id/login_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

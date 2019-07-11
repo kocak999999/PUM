@@ -38,267 +38,247 @@
     </LinearLayout>
 
 
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_request"
+        android:layout_marginTop="14dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="1"
+        android:columnOrderPreserved="false"
+        android:rowCount="3">
 
-        <GridLayout
-            android:id="@+id/grid"
-            android:layout_below="@id/title_request"
-            android:layout_width="match_parent"
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_request_emp_detail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="1"
-            android:columnOrderPreserved="false"
-            android:rowCount="3">
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="18dp">
 
-            <android.support.v7.widget.CardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="18dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bginput6"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bginput6"
+                android:orientation="vertical"
+                android:padding="16dp">
 
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lemon_milk_light"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:text="@string/subtitle_employee"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lemon_milk_light"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="@string/subtitle_employee"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_emp_name_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:id="@+id/tv_emp_dep_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Dep"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:id="@+id/tv_start_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Start Date"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:id="@+id/tv_end_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="End Date"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="18dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bginput6"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lemon_milk_light"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:text="@string/request_title"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" /><TextView
+                <TextView
+                    android:id="@+id/tv_emp_name_detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily=""
                     android:paddingStart="24dp"
                     android:paddingLeft="18dp"
-                    android:text="Emp Name"
                     android:paddingRight="18dp"
+                    android:text="Emp Name"
                     android:textColor="@color/colorHint"
                     android:textSize="18sp" />
 
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="18dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bginput6"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lemon_milk_light"
-                        android:paddingLeft="18dp"
-                        android:paddingRight="18dp"
-                        android:text="@string/request_title"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily=""
-                        android:paddingStart="24dp"
-                        android:paddingLeft="18dp"
-                        android:text="Emp Name"
-                        android:paddingRight="18dp"
-                        android:textColor="@color/colorHint"
-                        android:textSize="18sp" /><TextView
+                <TextView
+                    android:id="@+id/tv_emp_dep_detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily=""
                     android:paddingStart="24dp"
                     android:paddingLeft="18dp"
-                    android:text="Emp Name"
                     android:paddingRight="18dp"
+                    android:text="Emp Dep"
                     android:textColor="@color/colorHint"
                     android:textSize="18sp" />
 
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_start_date_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Start Date"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
 
-            </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_end_date_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="End Date"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+
+            android:id="@+id/cv_request_doc_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bginput6"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lemon_milk_light"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="@string/subtitle_document"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Reff Document"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Document Detail"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
 
 
 
+            </LinearLayout>
 
-        </GridLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_request_fund_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bginput6"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lemon_milk_light"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="@string/subtitle_fund"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Emp Name"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Emp Name"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Emp Name"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Emp Name"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily=""
+                    android:paddingStart="24dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:text="Emp Name"
+                    android:textColor="@color/colorHint"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </GridLayout>
 
 
     <!--<ScrollView-->
@@ -487,9 +467,9 @@
     <LinearLayout
 
         android:id="@+id/bottom_page"
-        android:layout_below="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/grid"
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
