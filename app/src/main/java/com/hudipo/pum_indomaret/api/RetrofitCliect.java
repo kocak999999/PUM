@@ -15,7 +15,8 @@ public class RetrofitCliect {
 
 //    private static final String BASE_URL = "http://172.20.10.3/MyApi3/public/";
    //private static final String BASE_URL = "http://10.7.70.80/MyApi3/public/";
-   private static final String BASE_URL = "http://172.20.10.3/MyApi3/public/";
+//   private static final String BASE_URL = "http://172.20.10.3/MyApi3/public/";
+   private static final String BASE_URL = "https://hudipo.com/MyApi3/public/";
     private static final String AUTH = "Basic " + Base64.encodeToString(("hudipo:161616").getBytes(), Base64.NO_WRAP);
 
     //singleton instance

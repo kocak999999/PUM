@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.inbox.InboxActivity"></activity>
+        <activity android:name=".activities.responsibility.ResponsActivity"></activity>
+        <activity android:name=".activities.inbox.InboxActivity" />
         <activity android:name=".activities.approval.ApprovalActivity" />
         <activity android:name=".activities.request.RequestDetailActivity" />
         <activity android:name=".activities.request.Request3Activity" />

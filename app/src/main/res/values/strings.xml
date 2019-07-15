@@ -25,6 +25,10 @@
     <string name="rcv_inbox1">Reference Code :</string>
     <string name="rcv_inbox2">Verification Code :</string>
     <string name="txt_logout">Logout</string>
+    <string name="copy_right">Copyright © 2019 by PT. Indomarco Prismatama</string>
+    <string name="next_features">Next Features</string>
+    <string name="input_your_email">email</string>
+    <string name="input_password">Password</string>
 
 
     <string-array name="reff_doc">
