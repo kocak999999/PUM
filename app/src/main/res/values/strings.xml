@@ -20,6 +20,7 @@
     <string name="rcv_approval1">Pum Number :</string>
     <string name="rcv_approval2">Name :</string>
     <string name="rcv_approval3">Amount :</string>
+    <string name="rcv_approval4">Status :</string>
 
     <!--inbox tag-->
     <string name="rcv_inbox1">Reference Code :</string>
@@ -27,8 +28,11 @@
     <string name="txt_logout">Logout</string>
     <string name="copy_right">Copyright © 2019 by PT. Indomarco Prismatama</string>
     <string name="next_features">Next Features</string>
-    <string name="input_your_email">email</string>
+    <string name="input_your_num">NIK</string>
     <string name="input_password">Password</string>
+    <string name="input_access_code">Acces Code</string>
+    <string name="nik_hint">      NIK</string>
+    <string name="string_login_in_regis">Already have an Account?   Click to Login</string>
 
 
     <string-array name="reff_doc">

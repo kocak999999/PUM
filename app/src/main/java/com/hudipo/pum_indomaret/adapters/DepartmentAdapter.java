@@ -16,11 +16,11 @@ import java.util.List;
 
 public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.DepartmentViewHolder> {
 
-    private Context mCtx;
+    private Context context;
     private List<Department> departmentList;
 
-    public DepartmentAdapter(Context mCtx, List<Department> departmentList) {
-        this.mCtx = mCtx;
+    public DepartmentAdapter(Context context, List<Department> departmentList) {
+        this.context = context;
         this.departmentList = departmentList;
     }
 
@@ -28,7 +28,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.De
     @NonNull
     @Override
     public DepartmentViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(mCtx).inflate(R.layout.recyclerview_department,viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.recyclerview_department,viewGroup, false);
         return new DepartmentViewHolder(view);
 
     }

@@ -1,9 +1,9 @@
 package com.hudipo.pum_indomaret.activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,20 +20,19 @@ import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText et_emp_name_regis;
-    private EditText et_emp_email_regis;
+    private EditText et_emp_num_regis;
     private EditText et_pass_regis;
-    private TextView tv_login_in_regis;
+    private EditText et_pin_regis;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        et_emp_name_regis = findViewById(R.id.et_emp_name_regis);
-        et_emp_email_regis = findViewById(R.id.et_emp_email_regis);
+        et_emp_num_regis = findViewById(R.id.et_emp_num_regis);
         et_pass_regis = findViewById(R.id.et_pass_regis);
-        tv_login_in_regis = findViewById(R.id.tv_login_in_regis);
+        et_pin_regis = findViewById(R.id.et_pin_regis);
 
         findViewById(R.id.btn_regis).setOnClickListener(this);
         findViewById(R.id.tv_login_in_regis).setOnClickListener(this);
@@ -52,21 +51,28 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private void userSignup() {
-        String str_emp_name = et_emp_name_regis.getText().toString().trim();
-        String str_emp_email = et_emp_email_regis.getText().toString().trim();
-        String str_pass = et_pass_regis.getText().toString().trim();
+    private void userRegis() {
 
-        if (str_emp_email.isEmpty()) {
-            et_emp_email_regis.setError("Email is Required !");
-            et_emp_email_regis.requestFocus();
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Registering your ID...");
+        progressDialog.show();
+
+        String str_emp_num = et_emp_num_regis.getText().toString().trim();
+        String str_pass = et_pass_regis.getText().toString().trim();
+        String str_pin = et_pin_regis.getText().toString().trim();
+
+        if (str_emp_num.isEmpty()) {
+            et_emp_num_regis.setError("NIK is required !");
+            et_emp_num_regis.requestFocus();
             return;
+
         }
 
-        if (Patterns.EMAIL_ADDRESS.matcher(str_emp_email).matches()) {
-            et_emp_name_regis.setError("Email a valid Email ");
-            et_emp_name_regis.requestFocus();
+        if (str_emp_num.length() < 10) {
+            et_emp_num_regis.setError("NIK must be at least 10 character long !");
+            et_emp_num_regis.requestFocus();
             return;
+
         }
 
         if (str_pass.isEmpty()) {
@@ -76,24 +82,35 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         }
 
-        if (str_pass.length() < 8) {
-            et_pass_regis.setError("Password must be at least 8 character long !");
+
+        if (str_pass.length() < 6) {
+            et_pass_regis.setError("Password must be at least 6 character long !");
             et_pass_regis.requestFocus();
             return;
 
         }
 
-        if (str_emp_name.isEmpty()) {
-            et_emp_name_regis.setError("Name is required !");
-            et_emp_name_regis.requestFocus();
+        if (str_pin.isEmpty()) {
+            et_pin_regis.setError("PIN Required");
+            et_pin_regis.requestFocus();
+            return;
+
+        }
+        if (str_pin.length() < 8) {
+            et_pass_regis.setError("PIN must be at least 8 character long !");
+            et_pass_regis.requestFocus();
             return;
 
         }
 
+
+
+
         Call<DefaultResponse> call = RetrofitCliect
                 .getInstance()
                 .getApi()
-                .createuser(str_emp_name, str_emp_email, str_pass);
+                .register(str_emp_num, str_pass,str_pin);
+
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
@@ -119,7 +136,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_regis:
-                userSignup();
+                userRegis();
                 break;
             case R.id.tv_login_in_regis:
                 startActivity(new Intent(this,LoginActivity.class));

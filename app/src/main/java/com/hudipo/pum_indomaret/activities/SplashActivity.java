@@ -10,7 +10,7 @@ import com.hudipo.pum_indomaret.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT=3000;
+    private static int SPLASH_TIME_OUT=2000;
     ImageView login_bg;
 
     @Override
@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         login_bg = (ImageView) findViewById(R.id.login_bg);
-        login_bg.animate().scaleX(2).scaleY(2).setDuration(8000).start();
+        login_bg.animate().scaleX(2).scaleY(2).setDuration(7000).start();
 
 
         new Handler().postDelayed(new Runnable() {

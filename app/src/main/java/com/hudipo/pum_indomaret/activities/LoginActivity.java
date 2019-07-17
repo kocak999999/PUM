@@ -19,8 +19,9 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText et_emp_email_login;
+    private EditText et_emp_num_login;
     private EditText et_pass_login;
+
 
 
     @Override
@@ -28,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        et_emp_email_login = (EditText) findViewById(R.id.et_emp_email_login);
+        et_emp_num_login = (EditText) findViewById(R.id.et_emp_num_login);
         et_pass_login = (EditText)findViewById(R.id.et_pass_login);
 
         findViewById(R.id.btn_login).setOnClickListener(this);
@@ -48,20 +49,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void userLogin() {
-        String str_emp_email_login = et_emp_email_login.getText().toString().trim();
+        String str_emp_num_login = et_emp_num_login.getText().toString().trim();
         String str_pass_login = et_pass_login.getText().toString().trim();
 
-        if (str_emp_email_login.isEmpty()) {
-            et_emp_email_login.setError("Email is Required !");
-            et_emp_email_login.requestFocus();
+        if (str_emp_num_login.isEmpty()) {
+            et_emp_num_login.setError("NIK is Required !");
+            et_emp_num_login.requestFocus();
             return;
         }
 
-        if (Patterns.EMAIL_ADDRESS.matcher(str_emp_email_login).matches()) {
-            et_emp_email_login.setError("Email a valid Email ");
-            et_emp_email_login.requestFocus();
-            return;
-        }
 
         if (str_pass_login.isEmpty()) {
             et_pass_login.setError("Password Required");
@@ -77,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         }
         Call<LoginResponse> call = RetrofitCliect
-                .getInstance().getApi().userlogin(str_emp_email_login, str_pass_login);
+                .getInstance().getApi().login(str_emp_num_login, str_pass_login);
 
         call.enqueue(new Callback<LoginResponse>() {
             @Override

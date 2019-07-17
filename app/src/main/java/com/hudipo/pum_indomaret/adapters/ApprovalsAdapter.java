@@ -9,49 +9,51 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hudipo.pum_indomaret.R;
-import com.hudipo.pum_indomaret.model.ApprovalList;
+
+import com.hudipo.pum_indomaret.model.Approval;
 
 import java.util.List;
 
+
 public class ApprovalsAdapter extends RecyclerView.Adapter<ApprovalsAdapter.ApprovalsViewHolder> {
 
-
     private Context context;
-    private List<ApprovalList> approvalLists;
+    private List<Approval> approvals;
 
-    public ApprovalsAdapter(Context context, List<ApprovalList> approvalLists) {
+    public ApprovalsAdapter(Context context, List<Approval> approvals) {
         this.context = context;
-        this.approvalLists = approvalLists;
+        this.approvals = approvals;
     }
 
     @NonNull
     @Override
-    public ApprovalsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context)
-                .inflate(R.layout.list_rcv_approval, viewGroup, false);
+    public ApprovalsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.cell_approval, parent, false);
         return new ApprovalsViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ApprovalsViewHolder approvalsViewHolder, int i) {
+    public void onBindViewHolder(@NonNull ApprovalsViewHolder holder, int position) {
+        Approval approval = approvals.get(position);
 
-        ApprovalList approvalList = approvalLists.get(i);
-        approvalsViewHolder.tv_pum_number_approval.setText(approvalList.getStr_pum_number_approval());
-        approvalsViewHolder.tv_pum_name_approval.setText(approvalList.getStr_pum_name_approval());
-        approvalsViewHolder.tv_pum_amount_approval.setText(approvalList.getStr_pum_amount_approval());
+        holder.tv_pum_number_approval.setText("getttt");
+        holder.tv_pum_name_approval.setText(approval.getStr_pum_name_approval());
+        holder.tv_pum_amount_approval.setText(approval.getStr_pum_amount_approval());
+
 
     }
 
     @Override
     public int getItemCount() {
-        return approvalLists.size();
+        return approvals.size();
     }
 
-    class ApprovalsViewHolder extends RecyclerView.ViewHolder{
+    class ApprovalsViewHolder extends RecyclerView.ViewHolder {
 
         TextView tv_pum_number_approval;
         TextView tv_pum_name_approval;
         TextView tv_pum_amount_approval;
+
         public ApprovalsViewHolder(@NonNull View itemView) {
             super(itemView);
 

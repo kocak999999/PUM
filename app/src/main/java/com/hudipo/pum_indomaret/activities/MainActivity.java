@@ -6,21 +6,23 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.activities.approval.ApprovalActivity;
 import com.hudipo.pum_indomaret.activities.inbox.InboxActivity;
 import com.hudipo.pum_indomaret.activities.request.RequestActivity;
+import com.hudipo.pum_indomaret.activities.setting.SettingActivity;
 import com.hudipo.pum_indomaret.model.User;
 import com.hudipo.pum_indomaret.storage.SharedPrefManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tv_emp_id;
-    private TextView tv_emp_name;
-    private TextView tv_emp_email;
-    Button btn_logout;
+    ImageView profile_img;
+    TextView tv_emp_num;
+    TextView tv_emp_name;
+
     CardView btn_request;
     CardView btn_approval;
     CardView btn_inbox;
@@ -28,14 +30,17 @@ public class MainActivity extends AppCompatActivity {
     CardView btn_setting;
     CardView btn_report;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       tv_emp_id = findViewById(R.id.tv_emp_id);
-        tv_emp_name= findViewById(R.id.tv_emp_name);
-        tv_emp_email = findViewById(R.id.tv_emp_email);
+        profile_img = findViewById(R.id.profile_img);
+        tv_emp_num = findViewById(R.id.tv_emp_num);
+        tv_emp_name = findViewById(R.id.tv_emp_name);
+
 
         btn_request = (CardView) findViewById(R.id.btn_request);
         btn_approval = (CardView) findViewById(R.id.btn_approval);
@@ -44,13 +49,10 @@ public class MainActivity extends AppCompatActivity {
         btn_setting = (CardView) findViewById(R.id.btn_setting);
         btn_report = (CardView) findViewById(R.id.btn_report);
 
-        btn_logout = findViewById(R.id.btn_logout);
 
-        User user= SharedPrefManager.getInstance(this).getUser();
-
-        tv_emp_id.setText(""+user.getEmp_id());
+        User user = SharedPrefManager.getInstance(this).getUser();
+        tv_emp_num.setText("" + user.getEmp_num());
         tv_emp_name.setText(user.getEmp_name());
-        tv_emp_email.setText(user.getEmp_email());
 
 
         btn_request.setOnClickListener(new View.OnClickListener() {
@@ -62,12 +64,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               logout();
-            }
-        });
 
         btn_approval.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +81,27 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btn_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        //profile photo
+        profile_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 
     private void logout() {
