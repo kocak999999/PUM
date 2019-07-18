@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.setting.ChangePinActivity"></activity>
+        <activity android:name=".activities.TestActivity"></activity>
+        <activity android:name=".activities.setting.ChangePinActivity" />
         <activity android:name=".activities.setting.ChangePhotoActivity" />
         <activity android:name=".activities.setting.SettingActivity" />
         <activity android:name=".activities.responsibility.ResponsActivity" />

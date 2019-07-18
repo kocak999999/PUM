@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,61 +10,70 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-60dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-60dp">
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="240dp"
             android:layout_height="260dp"
-            android:layout_marginTop="100dp"
-            app:srcCompat="@mipmap/ic_icon_logo_pum_idm"
-            />
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/pums" />
 
     </LinearLayout>
 
-
-
     <EditText
         android:id="@+id/et_emp_num_login"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="40dp"
+        android:layout_above="@+id/ti_pass_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
         android:background="#11000000"
-        android:drawableStart="@drawable/ic_action_email"
+        android:drawableLeft="@drawable/ic_action_person"
         android:ems="10"
-        android:hint="@string/input_your_num"
-        android:inputType="textEmailAddress"
-        android:textSize="16sp"
+        android:hint="  NIK"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:inputType="numberSigned"
+        android:textSize="16sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_pass_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cdv_login"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
-        android:layout_above="@+id/et_pass_login"
-        android:layout_centerHorizontal="true" />
+        app:passwordToggleEnabled="true">
 
-    <EditText
-        android:id="@+id/et_pass_login"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:background="#11000000"
-        android:drawableLeft="@drawable/ic_action_pass"
-        android:ems="10"
-        android:hint="@string/input_password"
-        android:inputType="textPassword"
-        android:layout_marginBottom="130dp"
-        android:layout_alignBottom="@+id/btn_login"
-        android:layout_alignLeft="@+id/et_emp_num_login"
-        android:layout_alignStart="@+id/et_emp_num_login"
+        <EditText
+            android:id="@+id/et_pass_login"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:background="#11000000"
+            android:drawableStart="@drawable/ic_action_pass"
+            android:ems="10"
+            android:hint=" Password"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
 
-        />
+
+
 
     <android.support.v7.widget.CardView
-        android:id="@+id/btn_login"
+        android:id="@+id/cdv_login"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_above="@+id/tv_signup_in_login_page"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
         app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="25dp"
-        app:cardElevation="10dp"
-        android:layout_marginBottom="31dp"
-        android:layout_above="@+id/tv_signup_in_login_page"
-        android:layout_centerHorizontal="true">
+        app:cardElevation="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -77,9 +85,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="Login"
-                android:textStyle="bold"
                 android:textColor="#fff"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -87,20 +95,20 @@
         android:id="@+id/tv_signup_in_login_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Need Account ? Register here"
-        android:textColor="#ffff"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="6dp"
+        android:text="Need Account ? Register here"
+        android:textColor="#ffff" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:id="@+id/linearLayout">
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
 
     </LinearLayout>

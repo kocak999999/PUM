@@ -23,8 +23,8 @@ public class SettingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting);
 
         cdv_change_pp = (CardView) findViewById(R.id.cdv_change_pp);
-        cdv_change_pin = (CardView) findViewById(R.id.cdv_change_pp);
-        cdv_logout = (CardView) findViewById(R.id.cdv_change_pp);
+        cdv_change_pin = (CardView) findViewById(R.id.cdv_change_pin);
+        cdv_logout = (CardView) findViewById(R.id.cdv_logout);
 
         cdv_change_pp.setOnClickListener(new View.OnClickListener() {
             @Override

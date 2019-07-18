@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitCliect {
 
-   private static final String BASE_URL = "https://http://jeffapi.hudipo.com/api/";
+   private static final String BASE_URL = "https://jeffapi.hudipo.com/api/";
 //    private static final String AUTH = "Basic " + Base64.encodeToString(("hudipo:161616").getBytes(), Base64.NO_WRAP);
 
     //singleton instance

@@ -29,24 +29,26 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putInt("user_id", user.getUser_id());
+        editor.putInt("emp_id", user.getEmp_id());
         editor.putString("emp_num", user.getEmp_num());
         editor.putString("emp_name", user.getEmp_name());
+        editor.putString("emp_email", user.getEmp_name());
         editor.apply();
 
     }
 
     public boolean isLoggedIn() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("user_id", -1) != -1;
+        return sharedPreferences.getInt("emp_id", -1) != -1;
     }
 
     public User getUser() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
-                sharedPreferences.getInt("user_id", -1),
+                sharedPreferences.getInt("emp_id", -1),
                 sharedPreferences.getString("emp_num", null),
-                sharedPreferences.getString("emp_name", null)
+                sharedPreferences.getString("emp_name", null),
+                sharedPreferences.getString("emp_email", null)
 
         );
     }

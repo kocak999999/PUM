@@ -5,6 +5,7 @@ import com.hudipo.pum_indomaret.model.DepartmentResponse;
 import com.hudipo.pum_indomaret.model.LoginResponse;
 import com.hudipo.pum_indomaret.model.UsersResponse;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -29,9 +30,9 @@ public interface Api {
             @Field("emp_num") String emp_email,
             @Field("password") String password
     );
-
-    @GET("allusers")
-    Call<UsersResponse> getUsers();
+//
+//    @GET("allusers")
+//    Call<UsersResponse> getUsers();
 
 
 

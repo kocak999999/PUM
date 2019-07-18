@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         User user = SharedPrefManager.getInstance(this).getUser();
-        tv_emp_num.setText("" + user.getEmp_num());
-        tv_emp_name.setText(user.getEmp_name());
+        tv_emp_num.setText(user.getEmp_num());
+        tv_emp_name.setText("Welcome " + user.getEmp_name());
 
 
         btn_request.setOnClickListener(new View.OnClickListener() {
@@ -104,12 +104,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void logout() {
-        SharedPrefManager.getInstance(this).clear();
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-    }
+//    private void logout() {
+//        SharedPrefManager.getInstance(this).clear();
+//        Intent intent = new Intent(this, LoginActivity.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//        startActivity(intent);
+//    }
 
 
     @Override

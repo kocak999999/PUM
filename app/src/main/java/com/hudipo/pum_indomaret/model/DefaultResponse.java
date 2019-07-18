@@ -19,6 +19,7 @@ public class DefaultResponse {
         return err;
     }
 
+
     public String getMsg() {
         return msg;
     }
