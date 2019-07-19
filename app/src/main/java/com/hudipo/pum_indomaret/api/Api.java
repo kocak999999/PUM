@@ -2,6 +2,7 @@ package com.hudipo.pum_indomaret.api;
 
 import com.hudipo.pum_indomaret.model.DefaultResponse;
 import com.hudipo.pum_indomaret.model.DepartmentResponse;
+import com.hudipo.pum_indomaret.model.DocumentsResponse;
 import com.hudipo.pum_indomaret.model.LoginResponse;
 import com.hudipo.pum_indomaret.model.UsersResponse;
 
@@ -30,9 +31,9 @@ public interface Api {
             @Field("emp_num") String emp_email,
             @Field("password") String password
     );
-//
-//    @GET("allusers")
-//    Call<UsersResponse> getUsers();
+
+    @GET("documents")
+    Call<DocumentsResponse> getDocument();
 
 
 

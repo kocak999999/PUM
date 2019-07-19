@@ -18,6 +18,8 @@ import com.hudipo.pum_indomaret.adapters.CustomGridAdapter;
 import com.hudipo.pum_indomaret.api.RetrofitCliect;
 import com.hudipo.pum_indomaret.model.Department;
 import com.hudipo.pum_indomaret.model.DepartmentResponse;
+import com.hudipo.pum_indomaret.model.User;
+import com.hudipo.pum_indomaret.storage.SharedPrefManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -64,6 +66,10 @@ public class RequestActivity extends AppCompatActivity {
         tv_start_date_request = (TextView) findViewById(R.id.tv_start_date_request);
         tv_end_date_request = (TextView) findViewById(R.id.tv_end_date_request);
         btn_next_request = (Button) findViewById(R.id.btn_next_request);
+
+
+        User user = SharedPrefManager.getInstance(this).getUser();
+        tv_emp_name_request.setText(user.getNAME());
 
         c = Calendar.getInstance();
         df2 = new SimpleDateFormat("yyyy-MM-dd");

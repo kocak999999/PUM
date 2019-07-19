@@ -2,31 +2,32 @@ package com.hudipo.pum_indomaret.model;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    private int emp_id;
-    private String emp_num;
-    private String emp_name;
-    private String emp_email;
+    private int EMP_ID;
+    private String EMP_NUM;
+    private String NAME;
+    private String EMAIL;
 
-    public User(int emp_id, String emp_num, String emp_name, String emp_email) {
-        this.emp_id = emp_id;
-        this.emp_num = emp_num;
-        this.emp_name = emp_name;
-        this.emp_email = emp_email;
+    public User(int EMP_ID, String EMP_NUM, String NAME, String EMAIL) {
+        this.EMP_ID = EMP_ID;
+        this.EMP_NUM = EMP_NUM;
+        this.NAME = NAME;
+        this.EMAIL = EMAIL;
     }
 
-    public int getEmp_id() {
-        return emp_id;
+
+    public int getEMP_ID() {
+        return EMP_ID;
     }
 
-    public String getEmp_num() {
-        return emp_num;
+    public String getEMP_NUM() {
+        return EMP_NUM;
     }
 
-    public String getEmp_name() {
-        return emp_name;
+    public String getNAME() {
+        return NAME;
     }
 
-    public String getEmp_email() {
-        return emp_email;
+    public String getEMAIL() {
+        return EMAIL;
     }
 }

@@ -29,26 +29,26 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putInt("emp_id", user.getEmp_id());
-        editor.putString("emp_num", user.getEmp_num());
-        editor.putString("emp_name", user.getEmp_name());
-        editor.putString("emp_email", user.getEmp_name());
+        editor.putInt("EMP_ID", user.getEMP_ID());
+        editor.putString("EMP_NUM", user.getEMP_NUM());
+        editor.putString("NAME", user.getNAME());
+        editor.putString("EMAIL", user.getEMAIL());
         editor.apply();
 
     }
 
     public boolean isLoggedIn() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("emp_id", -1) != -1;
+        return sharedPreferences.getInt("EMP_ID", -1) != -1;
     }
 
     public User getUser() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
-                sharedPreferences.getInt("emp_id", -1),
-                sharedPreferences.getString("emp_num", null),
-                sharedPreferences.getString("emp_name", null),
-                sharedPreferences.getString("emp_email", null)
+                sharedPreferences.getInt("EMP_ID", -1),
+                sharedPreferences.getString("EMP_NUM", null),
+                sharedPreferences.getString("NAME", null),
+                sharedPreferences.getString("EMAIL", null)
 
         );
     }

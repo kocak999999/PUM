@@ -36,7 +36,7 @@ public class ApprovalsAdapter extends RecyclerView.Adapter<ApprovalsAdapter.Appr
     public void onBindViewHolder(@NonNull ApprovalsViewHolder holder, int position) {
         Approval approval = approvals.get(position);
 
-        holder.tv_pum_number_approval.setText("getttt");
+        holder.tv_pum_number_approval.setText(approval.getStr_pum_number_approval());
         holder.tv_pum_name_approval.setText(approval.getStr_pum_name_approval());
         holder.tv_pum_amount_approval.setText(approval.getStr_pum_amount_approval());
 

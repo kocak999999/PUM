@@ -20,8 +20,8 @@ import com.hudipo.pum_indomaret.storage.SharedPrefManager;
 public class MainActivity extends AppCompatActivity {
 
     ImageView profile_img;
-    TextView tv_emp_num;
     TextView tv_emp_name;
+    TextView tv_emp_num;
 
     CardView btn_request;
     CardView btn_approval;
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         profile_img = findViewById(R.id.profile_img);
-        tv_emp_num = findViewById(R.id.tv_emp_num);
         tv_emp_name = findViewById(R.id.tv_emp_name);
+        tv_emp_num = findViewById(R.id.tv_emp_num);
 
 
         btn_request = (CardView) findViewById(R.id.btn_request);
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         User user = SharedPrefManager.getInstance(this).getUser();
-        tv_emp_num.setText(user.getEmp_num());
-        tv_emp_name.setText("Welcome " + user.getEmp_name());
+        tv_emp_name.setText("Welcome ! \n" + user.getNAME());
+        tv_emp_num.setText(user.getEMP_NUM());
 
 
         btn_request.setOnClickListener(new View.OnClickListener() {

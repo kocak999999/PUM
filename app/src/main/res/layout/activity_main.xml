@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgapps"
+    android:background="@drawable/gradient"
     android:fillViewport="true"
     tools:context=".activities.MainActivity">
 
@@ -38,6 +38,8 @@
                     android:layout_below="@id/profile_img"
                     android:layout_centerHorizontal="true"
                     android:text="@string/emp_name"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
                     android:fontFamily="@font/lemon_milk"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"

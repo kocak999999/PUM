@@ -17,10 +17,18 @@
     <string name="subtitle_doc_detail">DOCUMENT DETAIL</string>
 
     <!--approval tag-->
+    <string name="rcv_doc1">Doc Number </string>
+    <string name="rcv_doc2">Amount </string>
+    <string name="rcv_doc3">Vendor Number </string>
+    <string name="rcv_doc4">Vendor Name </string>
+
+    <!--document tag-->
     <string name="rcv_approval1">Pum Number :</string>
     <string name="rcv_approval2">Name :</string>
     <string name="rcv_approval3">Amount :</string>
     <string name="rcv_approval4">Status :</string>
+
+
 
     <!--inbox tag-->
     <string name="rcv_inbox1">Reference Code :</string>
@@ -32,7 +40,7 @@
     <string name="input_password">Password</string>
     <string name="input_access_code">Acces Code</string>
     <string name="nik_hint">      NIK</string>
-    <string name="string_login_in_regis">Already have an Account?   Click to Login</string>
+    <string name="string_login_in_regis">Already have an Account? \n  Click to Login</string>
 
 
     <string-array name="reff_doc">
