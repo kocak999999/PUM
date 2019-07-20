@@ -12,6 +12,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.activities.approval.ApprovalActivity;
@@ -42,6 +43,8 @@ public class RequestDocument extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_document);
+
+
         view();
     }
 

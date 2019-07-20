@@ -1,11 +1,15 @@
 package com.hudipo.pum_indomaret.activities.request;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -13,7 +17,14 @@ import android.widget.TextView;
 
 import com.hudipo.pum_indomaret.R;
 
-public class Request2Activity extends AppCompatActivity{
+import java.util.concurrent.TimeUnit;
+
+public class Request2Activity extends AppCompatActivity {
+
+//    String myLog = "myLog";
+//    AlphaAnimation inAnimation;
+//    AlphaAnimation outAnimation;
+//    FrameLayout progressBarHolder;
 
     Spinner sp_doc_request2;
     TextView tv_doc_detail_request2;
@@ -47,7 +58,10 @@ public class Request2Activity extends AppCompatActivity{
         ibtn_doc_detail_request2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+//                progressBarHolder = (FrameLayout) findViewById(R.id.progressBarHolder);
                 Intent intent = new Intent(Request2Activity.this,RequestDocument.class);
+//                new MyTask().execute();
                 startActivity(intent);
             }
         });
@@ -78,4 +92,49 @@ public class Request2Activity extends AppCompatActivity{
 
     }
 
+//    @Override
+//    public void onClick(View v) {
+//        switch (v.getId()) {
+//            case R.id.button:
+//                new MyTask().execute();
+//                break;
+//        }
+//
+//    }
+
+//    private class MyTask extends AsyncTask<Void, Void, Void> {
+//
+//        @Override
+//        protected void onPreExecute() {
+//            super.onPreExecute();
+//            ibtn_doc_detail_request2.setEnabled(false);
+//            inAnimation = new AlphaAnimation(0f, 1f);
+//            inAnimation.setDuration(200);
+//            progressBarHolder.setAnimation(inAnimation);
+//            progressBarHolder.setVisibility(View.VISIBLE);
+//        }
+//
+//        @Override
+//        protected void onPostExecute(Void aVoid) {
+//            super.onPostExecute(aVoid);
+//            outAnimation = new AlphaAnimation(1f, 0f);
+//            outAnimation.setDuration(200);
+//            progressBarHolder.setAnimation(outAnimation);
+//            progressBarHolder.setVisibility(View.GONE);
+//            ibtn_doc_detail_request2.setEnabled(true);
+//        }
+//
+//        @Override
+//        protected Void doInBackground(Void... params) {
+//            try {
+//                for (int i = 0; i < 5; i++) {
+//                    Log.d(myLog, "Emulating some task.. Step " + i);
+//                    TimeUnit.SECONDS.sleep(1);
+//                }
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            return null;
+//        }
+//    }
 }
