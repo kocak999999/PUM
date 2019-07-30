@@ -2,7 +2,6 @@ package com.hudipo.pum_indomaret.activities.inbox;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.hudipo.pum_indomaret.R;
 
 public class InboxActivity extends AppCompatActivity {

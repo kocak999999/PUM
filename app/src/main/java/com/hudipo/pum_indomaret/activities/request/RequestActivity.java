@@ -1,11 +1,14 @@
 package com.hudipo.pum_indomaret.activities.request;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
@@ -14,35 +17,33 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hudipo.pum_indomaret.R;
-import com.hudipo.pum_indomaret.adapters.CustomGridAdapter;
-import com.hudipo.pum_indomaret.api.RetrofitCliect;
+import com.hudipo.pum_indomaret.adapters.DocumentsAdapter;
 import com.hudipo.pum_indomaret.model.Department;
-import com.hudipo.pum_indomaret.model.DepartmentResponse;
+import com.hudipo.pum_indomaret.model.Document;
 import com.hudipo.pum_indomaret.model.User;
 import com.hudipo.pum_indomaret.storage.SharedPrefManager;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 
 public class RequestActivity extends AppCompatActivity {
-
+    //declaration
     TextView tv_emp_name_request;
     Spinner sp_emp_dep_request;
-    ImageButton ibtn_start_date_request;
-    ImageButton ibtn_end_date_request;
-
-    TextView tv_start_date_request;
-    TextView tv_end_date_request;
-
+    private DocumentsAdapter adapter;
+    private ArrayList<Document> documentArrayList;
+    String[]dep;
+    ImageButton ibtn_use_date_request;
+    ImageButton ibtn_resp_date_request;
+    TextView tv_use_date_request;
+    TextView tv_resp_date_request;
     Button btn_next_request;
 
-    private int mYear, mMonth, mDay, mHour, mMinute;
+
+    private int mYear, mMonth, mDay;
     Calendar c;
     SimpleDateFormat df2;
 
@@ -50,9 +51,11 @@ public class RequestActivity extends AppCompatActivity {
     String str_sp_emp_dep;
     String strtgl;
     String strtgl2;
-    List<Department> listDepartment;
 
 
+
+
+    @SuppressLint("SimpleDateFormat")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,25 +63,43 @@ public class RequestActivity extends AppCompatActivity {
 
         tv_emp_name_request = (TextView) findViewById(R.id.tv_emp_name_request);
         sp_emp_dep_request = (Spinner) findViewById(R.id.sp_emp_dep_request);
-        ibtn_start_date_request = (ImageButton) findViewById(R.id.ibtn_start_date_request);
-        ibtn_end_date_request = (ImageButton) findViewById(R.id.ibtn_end_date_request);
+        dep = getResources().getStringArray(R.array.dep_name);
+        ArrayAdapter depAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,dep);
+        depAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_emp_dep_request.setAdapter(depAdapter);
 
-        tv_start_date_request = (TextView) findViewById(R.id.tv_start_date_request);
-        tv_end_date_request = (TextView) findViewById(R.id.tv_end_date_request);
+        ibtn_use_date_request = (ImageButton) findViewById(R.id.ibtn_use_date_request);
+        ibtn_resp_date_request = (ImageButton) findViewById(R.id.ibtn_resp_date_request);
+
+        tv_use_date_request = (TextView) findViewById(R.id.tv_use_date_request);
+        tv_resp_date_request = (TextView) findViewById(R.id.tv_resp_date_request);
         btn_next_request = (Button) findViewById(R.id.btn_next_request);
 
 
         User user = SharedPrefManager.getInstance(this).getUser();
         tv_emp_name_request.setText(user.getNAME());
 
+        //spinner
+        sp_emp_dep_request.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(RequestActivity.this,dep[position],Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         c = Calendar.getInstance();
         df2 = new SimpleDateFormat("yyyy-MM-dd");
         strtgl = df2.format(c.getTime());
         strtgl2 = df2.format(c.getTime());
-        tv_start_date_request.setText(strtgl);
-        tv_end_date_request.setText(strtgl2);
+        tv_use_date_request.setText(strtgl);
+        tv_resp_date_request.setText(strtgl2);
 
-        ibtn_start_date_request.setOnClickListener(new View.OnClickListener() {
+        ibtn_use_date_request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mYear = c.get(Calendar.YEAR);
@@ -107,7 +128,7 @@ public class RequestActivity extends AppCompatActivity {
                                     strtanggal = String.valueOf(dayOfMonth);
                                 }
                                 strtgl = year + "-" + strbulan + "-" + strtanggal;
-                                tv_start_date_request.setText(strtgl);
+                                tv_use_date_request.setText(strtgl);
                             }
                         }, mYear, mMonth, mDay);
                 datePickerDialog.show();
@@ -115,7 +136,7 @@ public class RequestActivity extends AppCompatActivity {
         });
 
 
-        ibtn_end_date_request.setOnClickListener(new View.OnClickListener() {
+        ibtn_resp_date_request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mYear = c.get(Calendar.YEAR);
@@ -144,7 +165,7 @@ public class RequestActivity extends AppCompatActivity {
                                     strtanggal = String.valueOf(dayOfMonth);
                                 }
                                 strtgl2 = year + "-" + strbulan + "-" + strtanggal;
-                                tv_end_date_request.setText(strtgl2);
+                                tv_resp_date_request.setText(strtgl2);
                             }
                         }, mYear, mMonth, mDay);
                 datePickerDialog.show();
@@ -192,7 +213,7 @@ public class RequestActivity extends AppCompatActivity {
 //            @Override
 //            public void onFailure(Call<DepartmentResponse> call, Throwable t) {
 //
-//                Toast.makeText(RequestActivity.this,"Error Messsage",Toast.LENGTH_LONG).show();
+//                Toast.makeText(RequestActivity.this,"Error Message",Toast.LENGTH_LONG).show();
 //
 //            }
 //        });

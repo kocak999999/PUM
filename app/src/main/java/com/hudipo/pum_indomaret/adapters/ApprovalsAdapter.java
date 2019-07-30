@@ -57,7 +57,7 @@ public class ApprovalsAdapter extends RecyclerView.Adapter<ApprovalsAdapter.Appr
         public ApprovalsViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tv_pum_number_approval = (TextView) itemView.findViewById(R.id.tv_pum_number_approval);
+            tv_pum_number_approval = (TextView) itemView.findViewById(R.id.tv_pum_number_inbox);
             tv_pum_name_approval = (TextView) itemView.findViewById(R.id.tv_pum_name_approval);
             tv_pum_amount_approval = (TextView) itemView.findViewById(R.id.tv_pum_amount_approval);
 

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">PUM</string>
-    <string name="emp_name">Alex Hunter</string>
+    <string name="emp_name">Emp Name</string>
     <string name="emp_poss">Chief Executive Officer</string>
-    <string name="emp_nik">2001616888</string>
+    <string name="emp_nik">Emp Number</string>
     <!--TITLE-->
     <string name="request_title">REQUEST</string>
     <string name="approval_title">APPROVAL</string>
@@ -31,8 +31,12 @@
 
 
     <!--inbox tag-->
-    <string name="rcv_inbox1">Reference Code :</string>
-    <string name="rcv_inbox2">Verification Code :</string>
+    <string name="rcv_inbox1">Pum Number :</string>
+    <string name="rcv_inbox2">Doc Type :</string>
+    <string name="rcv_inbox3">Doc Detail :</string>
+    <string name="rcv_inbox4">Trx Type :</string>
+    <string name="rcv_inbox5"> Amount :</string>
+    <string name="rcv_inbox6"> Status :</string>
     <string name="txt_logout">Logout</string>
     <string name="copy_right">Copyright © 2019 by PT. Indomarco Prismatama</string>
     <string name="next_features">Next Features</string>
@@ -41,6 +45,10 @@
     <string name="input_access_code">Acces Code</string>
     <string name="nik_hint">      NIK</string>
     <string name="string_login_in_regis">Already have an Account? \n  Click to Login</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_finish">Finish</string>
+    <string name="btn_cancel">Cancel</string>
+
 
 
     <string-array name="reff_doc">
@@ -63,5 +71,13 @@
         <item>Perlengkapan Dasar Karyawan</item>
         <item>Perlengkapan DC</item>
         <item>Perlengkapan Toko</item>
+    </string-array>
+
+    <string-array name="dep_name">
+        <item>Select Your Department</item>
+        <item>Dept 1</item>
+        <item>Dept 2</item>
+        <item>Dept 3</item>
+        <item>Dept 4</item>
     </string-array>
 </resources>

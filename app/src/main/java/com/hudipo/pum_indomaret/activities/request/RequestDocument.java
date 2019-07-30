@@ -12,7 +12,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
+import android.widget.Toast;
+
 
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.activities.approval.ApprovalActivity;
@@ -43,8 +44,6 @@ public class RequestDocument extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_document);
-
-
         view();
     }
 
@@ -73,13 +72,11 @@ public class RequestDocument extends AppCompatActivity {
                 adapter = new DocumentsAdapter(documentArrayList);
                 rcv_doc_detail_port.setAdapter(adapter);
 
-
-
             }
 
             @Override
             public void onFailure(Call<DocumentsResponse> call, Throwable t) {
-
+                Toast.makeText(RequestDocument.this,"Error Message",Toast.LENGTH_LONG).show();
             }
         });
     }

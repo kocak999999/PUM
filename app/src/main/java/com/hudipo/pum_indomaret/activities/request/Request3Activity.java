@@ -74,6 +74,8 @@ public class Request3Activity extends AppCompatActivity {
     }
 
     private void saveallrequest() {
+        Intent intent = new Intent(Request3Activity.this, RequestDetailActivity.class);
+        startActivity(intent);
 
     }
 }

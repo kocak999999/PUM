@@ -4,16 +4,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Department {
 
-    @SerializedName("DEPT_ID")
     private int DEPT_ID;
-
-    @SerializedName("NAME")
     private String NAME;
+    private String DESCRIPTION;
 
 
-    public Department(int DEPT_ID, String NAME) {
+    public Department(int DEPT_ID, String NAME, String DESCRIPTION) {
         this.DEPT_ID = DEPT_ID;
         this.NAME = NAME;
+        this.DESCRIPTION = DESCRIPTION;
     }
 
     public int getDEPT_ID() {
@@ -30,5 +29,13 @@ public class Department {
 
     public void setNAME(String NAME) {
         this.NAME = NAME;
+    }
+
+    public String getDESCRIPTION() {
+        return DESCRIPTION;
+    }
+
+    public void setDESCRIPTION(String DESCRIPTION) {
+        this.DESCRIPTION = DESCRIPTION;
     }
 }

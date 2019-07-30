@@ -133,7 +133,7 @@
                 android:layout_height="52dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/bginput5"
-                android:text="Submit"
+                android:text="@string/btn_next"
                 android:textColor="@color/colorHint"
                 android:textSize="22sp" />
         </LinearLayout>

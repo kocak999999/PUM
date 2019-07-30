@@ -5,7 +5,7 @@ import java.util.Date;
 public class Document {
 
     private int DOC_ID;
-    private String DOCTYPE;
+    private String DOC_TYPE;
     private String DOC_NUM;
     private String DOC_DATE;
     private Double DOC_AMOUNT;
@@ -14,10 +14,10 @@ public class Document {
     private String VENDOR_SITE_CODE;
     private String DOC_CURR;
 
-    public Document(int DOC_ID, String DOCTYPE, String DOC_NUM, String DOC_DATE, Double DOC_AMOUNT,
+    public Document(int DOC_ID, String DOC_TYPE, String DOC_NUM, String DOC_DATE, Double DOC_AMOUNT,
                     String VENDOR_NUM, String VENDOR_NAME, String VENDOR_SITE_CODE, String DOC_CURR) {
         this.DOC_ID = DOC_ID;
-        this.DOCTYPE = DOCTYPE;
+        this.DOC_TYPE = DOC_TYPE;
         this.DOC_NUM = DOC_NUM;
         this.DOC_DATE = DOC_DATE;
         this.DOC_AMOUNT = DOC_AMOUNT;
@@ -31,8 +31,8 @@ public class Document {
         return DOC_ID;
     }
 
-    public String getDOCTYPE() {
-        return DOCTYPE;
+    public String getDOC_TYPE() {
+        return DOC_TYPE;
     }
 
     public String getDOC_NUM() {

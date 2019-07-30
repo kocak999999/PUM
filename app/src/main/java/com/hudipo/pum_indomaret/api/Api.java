@@ -35,6 +35,20 @@ public interface Api {
     @GET("documents")
     Call<DocumentsResponse> getDocument();
 
+    @GET("getdept")
+    Call<DepartmentResponse> getDepartment();
+
+//    @GET("gettrxtype")
+//    Call<TrxResponse> getDepartment();
+
+
+
+//    @GET("inboxs")
+//    Call<InboxsResponse> getInbox();
+
+
+
+
 
 
 }
