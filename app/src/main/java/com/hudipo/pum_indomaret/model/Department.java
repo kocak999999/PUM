@@ -4,38 +4,38 @@ import com.google.gson.annotations.SerializedName;
 
 public class Department {
 
-    private int DEPT_ID;
-    private String NAME;
-    private String DESCRIPTION;
+    private int dept_id;
+    private String name;
+    private String description;
 
 
-    public Department(int DEPT_ID, String NAME, String DESCRIPTION) {
-        this.DEPT_ID = DEPT_ID;
-        this.NAME = NAME;
-        this.DESCRIPTION = DESCRIPTION;
+    public Department(int dept_id, String name, String description) {
+        this.dept_id = dept_id;
+        this.name = name;
+        this.description = description;
     }
 
-    public int getDEPT_ID() {
-        return DEPT_ID;
+    public int getDept_id() {
+        return dept_id;
     }
 
-    public void setDEPT_ID(int DEPT_ID) {
-        this.DEPT_ID = DEPT_ID;
+    public void setDept_id(int dept_id) {
+        this.dept_id = dept_id;
     }
 
-    public String getNAME() {
-        return NAME;
+    public String getName() {
+        return name;
     }
 
-    public void setNAME(String NAME) {
-        this.NAME = NAME;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDESCRIPTION() {
-        return DESCRIPTION;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDESCRIPTION(String DESCRIPTION) {
-        this.DESCRIPTION = DESCRIPTION;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

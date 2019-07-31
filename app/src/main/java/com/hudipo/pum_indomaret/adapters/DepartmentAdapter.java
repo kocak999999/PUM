@@ -1,62 +1,67 @@
 package com.hudipo.pum_indomaret.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.model.Department;
 
-
-import java.util.List;
-
-public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.DepartmentViewHolder> {
+public class DepartmentAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Department> departmentList;
+    private Department[] departments;
 
-    public DepartmentAdapter(Context context, List<Department> departmentList) {
+
+    public DepartmentAdapter(Context context,Department[] departments ) {
         this.context = context;
-        this.departmentList = departmentList;
+        this.departments = departments;
     }
-
-
-    @NonNull
-    @Override
-    public DepartmentViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recyclerview_department,viewGroup, false);
-        return new DepartmentViewHolder(view);
-
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull DepartmentViewHolder holder, int position) {
-        Department department = departmentList.get(position);
-
-        holder.tv_dept_name.setText(department.getNAME());
-
-    }
-
 
 
     @Override
-    public int getItemCount() {
-        return departmentList.size();
+    public int getCount() {
+        return departments.length;
     }
 
-    class DepartmentViewHolder extends RecyclerView.ViewHolder {
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
 
-        TextView tv_dept_name;
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
 
-        public DepartmentViewHolder(View itemView) {
-            super(itemView);
+    @Override
+    public View getDropDownView(int position, View convertView,ViewGroup parent) {
+        return getCustomView(position, convertView, parent);
+    }
 
-            tv_dept_name = itemView.findViewById(R.id.tv_dept_name);
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return getCustomView(position, convertView, parent);
+    }
 
-        }
+    public View getCustomView(int position, View convertView, ViewGroup parent) {
+
+        /********** Inflate spinner_rows.xml file for each row ( Defined below ) ************/
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View row = inflater.inflate(R.layout.cell_spinner_dep, parent, false);
+
+
+        TextView tv_dep_spinner        = (TextView)row.findViewById(R.id.tv_dep_spinner);
+        TextView tv_dep_detail_spinner          = (TextView)row.findViewById(R.id.tv_dep_detail_spinner);
+
+            // Set values for spinner each row
+        tv_dep_spinner.setText(departments[position].getName());
+        tv_dep_detail_spinner.setText(departments[position].getDescription());
+        return row;
     }
 }

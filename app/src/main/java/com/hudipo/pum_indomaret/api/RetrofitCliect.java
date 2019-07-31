@@ -13,18 +13,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitCliect {
 
-   private static final String BASE_URL = "https://jeffapi.hudipo.com/api/";
-//    private static final String AUTH = "Basic " + Base64.encodeToString(("hudipo:161616").getBytes(), Base64.NO_WRAP);
+    private static final String BASE_URL = "https://jeffapi.hudipo.com/api/";
 
     //singleton instance
     private static RetrofitCliect mInstance;
     //retrofit object
     private Retrofit retrofit;
 
-    private RetrofitCliect(){
-
-
-        retrofit=new Retrofit.Builder()
+    private RetrofitCliect() {
+        retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -32,14 +29,15 @@ public class RetrofitCliect {
 
     //syncronize method to get singleton instance
 
-    public static synchronized RetrofitCliect getInstance(){
-        if(mInstance == null){
+    public static synchronized RetrofitCliect getInstance() {
+        if (mInstance == null) {
             mInstance = new RetrofitCliect();
         }
         return mInstance;
     }
+
     //get Api
-    public Api getApi(){
+    public Api getApi() {
         return retrofit.create(Api.class);
     }
 

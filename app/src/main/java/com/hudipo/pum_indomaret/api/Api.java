@@ -36,7 +36,7 @@ public interface Api {
     Call<DocumentsResponse> getDocument();
 
     @GET("getdept")
-    Call<DepartmentResponse> getDepartment();
+    Call<DepartmentResponse> getDepartments();
 
 //    @GET("gettrxtype")
 //    Call<TrxResponse> getDepartment();

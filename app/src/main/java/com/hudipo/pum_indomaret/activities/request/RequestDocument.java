@@ -40,6 +40,7 @@ public class RequestDocument extends AppCompatActivity {
     private DocumentsAdapter adapter;
    private ArrayList<Document> documentArrayList;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

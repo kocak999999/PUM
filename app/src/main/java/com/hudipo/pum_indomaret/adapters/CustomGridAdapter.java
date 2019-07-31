@@ -69,7 +69,7 @@ public class CustomGridAdapter extends BaseAdapter {
 					.findViewById(R.id.tv_dept_name);
 
 
-			tv_dept_name.setText(listDepartment.get(position).getNAME());
+			tv_dept_name.setText(listDepartment.get(position).getName());
 
 		} else {
 			gridView = (View) convertView;
