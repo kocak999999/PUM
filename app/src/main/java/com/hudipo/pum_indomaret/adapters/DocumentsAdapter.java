@@ -12,12 +12,10 @@ import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.model.Document;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DocumentsAdapter extends RecyclerView.Adapter<DocumentsAdapter.DocumentsViewHolder> {
 
     private Context mCtx;
-//    private List<Document> documentList;
     private ArrayList<Document> documentList;
 
     public DocumentsAdapter(ArrayList<Document> documentList) {

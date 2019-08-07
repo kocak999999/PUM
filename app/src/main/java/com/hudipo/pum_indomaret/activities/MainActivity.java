@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.activities.approval.ApprovalActivity;
 import com.hudipo.pum_indomaret.activities.inbox.InboxActivity;
@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     CardView btn_setting;
     CardView btn_report;
 
+    ImageView request, approval,inbox, respons, setting, report, nextfeatures, nextfeatures2;
+
 
 
     @Override
@@ -38,8 +40,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         profile_img = findViewById(R.id.profile_img);
+
         tv_emp_name = findViewById(R.id.tv_emp_name);
         tv_emp_num = findViewById(R.id.tv_emp_num);
+
+        request = findViewById(R.id.picRequest);
+        Glide.with(this).load(R.drawable.ic_request).into(request);
+        approval = findViewById(R.id.picApprove);
+        Glide.with(this).load(R.drawable.ic_approval).into(approval);
+        inbox = findViewById(R.id.picInbox);
+        Glide.with(this).load(R.drawable.ic_envelope).into(inbox);
+        respons = findViewById(R.id.picRespon);
+        Glide.with(this).load(R.drawable.ic_resp).into(respons);
+        setting = findViewById(R.id.picSetting);
+        Glide.with(this).load(R.drawable.ic_setting).into(setting);
+        report = findViewById(R.id.picReport);
+        Glide.with(this).load(R.drawable.ic_report).into(report);
+        nextfeatures = findViewById(R.id.picNextFeatures);
+        Glide.with(this).load(R.drawable.ic_idea).into(nextfeatures);
+        nextfeatures2 = findViewById(R.id.picNextFeatures2);
+        Glide.with(this).load(R.drawable.ic_idea).into(nextfeatures2);
+
+
 
 
         btn_request = (CardView) findViewById(R.id.btn_request);

@@ -4,6 +4,7 @@
     package="com.hudipo.pum_indomaret">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -13,22 +14,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.request.RequestDocument"></activity>
-        <activity android:name=".activities.TestActivity" />
-        <activity android:name=".activities.setting.ChangePinActivity" />
-        <activity android:name=".activities.setting.ChangePhotoActivity" />
-        <activity android:name=".activities.setting.SettingActivity" />
-        <activity android:name=".activities.responsibility.ResponsActivity" />
-        <activity android:name=".activities.inbox.InboxActivity" />
-        <activity android:name=".activities.approval.ApprovalActivity" />
-        <activity android:name=".activities.request.RequestDetailActivity" />
-        <activity android:name=".activities.request.Request3Activity" />
-        <activity android:name=".activities.request.Request2Activity" />
-        <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.request.RequestActivity" />
-        <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.request.RequestDocument"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.setting.ChangePinActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.setting.ChangePhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.responsibility.ResponsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.inbox.InboxActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.approval.ApprovalActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.request.RequestDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.request.Request3Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.request.Request2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.request.RequestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

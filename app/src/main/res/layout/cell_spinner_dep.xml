@@ -3,7 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="0dp">
+    android:padding="0dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp">
 
     <TextView
         android:id="@+id/tv_dep_spinner"
@@ -13,15 +15,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:textColor="@color/colorHint" />
+        android:textColor="@color/colorHint"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        />
     <TextView
         android:id="@+id/tv_dep_detail_spinner"
         android:text="test"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="2dp"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorHint"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         />
 
 

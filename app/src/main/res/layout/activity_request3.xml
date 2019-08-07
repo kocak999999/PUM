@@ -94,7 +94,10 @@
             android:hint="Amount"
             android:textColorHint="@color/colorHint"
             android:textColor="@color/colorHint"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:inputType="numberSigned"
+            android:maxLines="1"
+            android:maxLength="10"/>
 
         <LinearLayout
             android:layout_width="match_parent"

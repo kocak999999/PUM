@@ -49,6 +49,8 @@
     <string name="btn_finish">Finish</string>
     <string name="btn_cancel">Cancel</string>
     <string name="prompt">Select Your Dep</string>
+    <string name="uploadImages">Set your image</string>
+    <string name="msg_loading">Loading...</string>
 
 
 

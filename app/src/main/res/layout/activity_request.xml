@@ -62,9 +62,8 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:background="@drawable/bginput2"
-            android:padding="2dp"
-            android:paddingStart="@dimen/et_start"
-            android:prompt="@string/prompt"
+            android:paddingTop="4dp"
+            android:paddingStart="14dp"
             android:popupBackground="#286FE6"/>
 
         <LinearLayout

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bgapps"
     android:fillViewport="true"
     tools:context=".activities.MainActivity">
 
@@ -24,12 +24,13 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="20dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_img"
                     android:layout_width="164dp"
                     android:layout_height="142dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/man" />
+                    android:src="@drawable/photo_2"
+                     />
 
                 <TextView
                     android:id="@+id/tv_emp_name"
@@ -86,9 +87,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picRequest"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_request" />
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -124,9 +126,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picApprove"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_approval" />
+                             />
 
                         <TextView
                             android:paddingRight="17.5dp"
@@ -163,9 +166,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picInbox"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_envelope" />
+                           />
 
                         <TextView
                             android:paddingRight="26dp"
@@ -199,9 +203,10 @@
                         android:orientation="vertical"
                         android:padding="16dp">
                         <ImageView
+                            android:id="@+id/picRespon"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_resp" />
+                           />
                         <TextView
 
                             android:paddingRight="2dp"
@@ -238,9 +243,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picSetting"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_setting" />
+                         />
 
                         <TextView
                             android:paddingRight="24dp"
@@ -277,9 +283,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picReport"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_report" />
+                            />
 
                         <TextView
                             android:paddingRight="26dp"
@@ -315,9 +322,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picNextFeatures"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_idea" />
+                        />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -351,9 +359,10 @@
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/picNextFeatures2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ic_idea" />
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"

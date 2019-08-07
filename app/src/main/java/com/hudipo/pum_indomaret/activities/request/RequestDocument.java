@@ -1,9 +1,8 @@
 package com.hudipo.pum_indomaret.activities.request;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,13 +15,13 @@ import android.widget.Toast;
 
 
 import com.hudipo.pum_indomaret.R;
-import com.hudipo.pum_indomaret.activities.approval.ApprovalActivity;
+
 import com.hudipo.pum_indomaret.adapters.DocumentsAdapter;
 import com.hudipo.pum_indomaret.api.Api;
 import com.hudipo.pum_indomaret.api.RetrofitCliect;
 import com.hudipo.pum_indomaret.model.Document;
 import com.hudipo.pum_indomaret.model.DocumentsResponse;
-import com.hudipo.pum_indomaret.model.UsersResponse;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,6 +54,8 @@ public class RequestDocument extends AppCompatActivity {
         rcv_doc_detail_port.setLayoutManager(layoutManager);
         loadJSON();
     }
+
+
 
     private void loadJSON(){
         Retrofit retrofit = new Retrofit.Builder()

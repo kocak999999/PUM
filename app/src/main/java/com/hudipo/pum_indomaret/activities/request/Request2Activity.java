@@ -29,32 +29,19 @@ import java.util.concurrent.TimeUnit;
 public class Request2Activity extends AppCompatActivity {
 
 
+
     Spinner sp_doc_request2;
     TextView tv_doc_detail_request2;
     ImageButton ibtn_doc_detail_request2;
     Button btn_next_request2;
-
     String strDocSelected;
     List<String> list;
     Spinner spinnerColorChange;
-
-    String str_emp_name;
-    String str_sp_emp_dep;
-    String strtgl;
-    String strtgl2;
-    String str_sp_doc_request2;
-    String str_tv_doc_detail_request2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request2);
-//
-//        Intent intent = getIntent();
-//        str_emp_name = intent.getStringExtra("kirimname");
-//        str_sp_emp_dep = intent.getStringExtra("kiridept");
-//        strtgl = intent.getStringExtra("kirimtanggal");
-//        strtgl2 = intent.getStringExtra("kirimtanggal2");
 
 
         sp_doc_request2 = (Spinner) findViewById(R.id.sp_doc_request2);
@@ -66,8 +53,17 @@ public class Request2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //TODO: bikin validasi kalau doc type yg kepilih "-" tombol ga bisa diteken
+//                if (list.contains("-")) {
+//                    ibtn_doc_detail_request2.setEnabled(false);
+//                } else {
+//                    Intent intent = new Intent(Request2Activity.this, RequestDocument.class);
+//                    startActivity(intent);
+//                }
+
                 Intent intent = new Intent(Request2Activity.this, RequestDocument.class);
                 startActivity(intent);
+
             }
         });
 
@@ -77,13 +73,6 @@ public class Request2Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Request2Activity.this, Request3Activity.class);
-////                intent.putExtra("kirimnama",str_emp_name);
-////                intent.putExtra("kiridept",str_sp_emp_dep);
-////                intent.putExtra("kirimtanggal1",strtgl);
-////                intent.putExtra("kirimtanggal2",strtgl2);
-////                intent.putExtra("kirimdoc",str_sp_doc_request2);
-////                intent.putExtra("kirimdocdetail",str_tv_doc_detail_request2);
-//
                 startActivity(intent);
 
             }
@@ -93,8 +82,9 @@ public class Request2Activity extends AppCompatActivity {
 
     }
 
-    public void getDocSpinner() {
 
+
+    public void getDocSpinner() {
 
         list = new ArrayList<String>();
         list.add("-");
@@ -102,12 +92,12 @@ public class Request2Activity extends AppCompatActivity {
         list.add("Surat Pesanan (SP)");
         list.add("Permintaan Pembelian (PP)");
 
-        spinnerColorChange = (Spinner)findViewById(R.id.sp_doc_request2);
+        spinnerColorChange = (Spinner) findViewById(R.id.sp_doc_request2);
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.custom_textview_to_spinner, list);
         dataAdapter.setDropDownViewResource(R.layout.custom_textview_to_spinner);
-
         spinnerColorChange.setAdapter(dataAdapter);
+
 //        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 //        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list){
@@ -127,24 +117,29 @@ public class Request2Activity extends AppCompatActivity {
 //            }
 //        };
 
-
-
         sp_doc_request2.setAdapter(dataAdapter);
         sp_doc_request2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 strDocSelected = list.get(position);
-//                Toast.makeText(Request2Activity.this, strDocSelected2, Toast.LENGTH_SHORT).show();
-                int panjang = strDocSelected.length();
-
-                if (panjang > 3) {
-                    Toast.makeText(Request2Activity.this, String.valueOf(panjang), Toast.LENGTH_SHORT).show();
-                    panjang = panjang - 3;
-                    String strDocSelected2 = strDocSelected.substring(panjang, panjang+2);
-                    Toast.makeText(Request2Activity.this, strDocSelected2, Toast.LENGTH_SHORT).show();
-
+                if(strDocSelected.equals("-")){
+                    ibtn_doc_detail_request2.setEnabled(false);
+                    //TODO: cari cara nya
+                    ibtn_doc_detail_request2.setBackgroundResource(R.drawable.bginput4);
+                }else{
+                    ibtn_doc_detail_request2.setEnabled(true);
+                    ibtn_doc_detail_request2.setBackgroundResource(R.drawable.bginput3);
                 }
 
+//                Toast.makeText(Request2Activity.this, strDocSelected2, Toast.LENGTH_SHORT).show();
+                int lengthOfSpinner = strDocSelected.length();
+
+                if (lengthOfSpinner > 3) {
+                    Toast.makeText(Request2Activity.this, String.valueOf(lengthOfSpinner), Toast.LENGTH_SHORT).show();
+                    lengthOfSpinner = lengthOfSpinner - 3;
+                    String strDocSelected2 = strDocSelected.substring(lengthOfSpinner, lengthOfSpinner + 2);
+                    Toast.makeText(Request2Activity.this, strDocSelected2, Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override

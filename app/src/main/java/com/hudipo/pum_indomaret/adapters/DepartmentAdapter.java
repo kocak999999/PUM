@@ -16,7 +16,7 @@ public class DepartmentAdapter extends BaseAdapter {
     private Department[] departments;
 
 
-    public DepartmentAdapter(Context context,Department[] departments ) {
+    public DepartmentAdapter(Context context, Department[] departments) {
         this.context = context;
         this.departments = departments;
     }
@@ -38,7 +38,7 @@ public class DepartmentAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getDropDownView(int position, View convertView,ViewGroup parent) {
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
         return getCustomView(position, convertView, parent);
     }
 
@@ -56,12 +56,22 @@ public class DepartmentAdapter extends BaseAdapter {
         View row = inflater.inflate(R.layout.cell_spinner_dep, parent, false);
 
 
-        TextView tv_dep_spinner        = (TextView)row.findViewById(R.id.tv_dep_spinner);
-        TextView tv_dep_detail_spinner          = (TextView)row.findViewById(R.id.tv_dep_detail_spinner);
+        TextView tv_dep_spinner = (TextView) row.findViewById(R.id.tv_dep_spinner);
+        TextView tv_dep_detail_spinner = (TextView) row.findViewById(R.id.tv_dep_detail_spinner);
 
+        if (position == 0) {
+
+            // Default selected Spinner item
+            tv_dep_spinner.setText("");
+            tv_dep_detail_spinner.setText("--Select Your Department--");
+
+        } else {
             // Set values for spinner each row
-        tv_dep_spinner.setText(departments[position].getName());
-        tv_dep_detail_spinner.setText(departments[position].getDescription());
+            tv_dep_spinner.setText(departments[position].getName());
+            tv_dep_detail_spinner.setText(departments[position].getDescription());
+
+        }
+
         return row;
     }
 }

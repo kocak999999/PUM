@@ -7,8 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.api.RetrofitCliect;
 import com.hudipo.pum_indomaret.model.LoginResponse;
@@ -23,7 +26,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText et_emp_num_login;
     private EditText et_pass_login;
     private CardView cdv_login;
-
+    private TextView tv_signup_in_login_page;
+    ImageView imgPreview;
 
 
     @Override
@@ -31,13 +35,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        imgPreview = findViewById(R.id.imageViewLogin);
+        Glide.with(this).load(R.drawable.pums).into(imgPreview);
+
         et_emp_num_login = (EditText) findViewById(R.id.et_emp_num_login);
         et_pass_login = (EditText) findViewById(R.id.et_pass_login);
-
         cdv_login = (CardView) findViewById(R.id.cdv_login);
         cdv_login.setOnClickListener(this);
-
-        findViewById(R.id.tv_signup_in_login_page).setOnClickListener(this);
+        tv_signup_in_login_page = (TextView) findViewById(R.id.tv_signup_in_login_page);
+        tv_signup_in_login_page.setOnClickListener(this);
 
     }
 

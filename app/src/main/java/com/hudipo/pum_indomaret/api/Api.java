@@ -1,5 +1,7 @@
 package com.hudipo.pum_indomaret.api;
 
+import com.hudipo.pum_indomaret.model.CreatePum;
+import com.hudipo.pum_indomaret.model.CreatePumResponse;
 import com.hudipo.pum_indomaret.model.DefaultResponse;
 import com.hudipo.pum_indomaret.model.DepartmentResponse;
 import com.hudipo.pum_indomaret.model.DocumentsResponse;
@@ -8,6 +10,7 @@ import com.hudipo.pum_indomaret.model.UsersResponse;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -24,6 +27,9 @@ public interface Api {
             @Field("pin") String pin
     );
 
+    @POST("createpum")
+    Call<CreatePumResponse> createPum(CreatePum createPum);
+
 
     @FormUrlEncoded
     @POST("login")
@@ -37,6 +43,8 @@ public interface Api {
 
     @GET("getdept")
     Call<DepartmentResponse> getDepartments();
+
+
 
 //    @GET("gettrxtype")
 //    Call<TrxResponse> getDepartment();

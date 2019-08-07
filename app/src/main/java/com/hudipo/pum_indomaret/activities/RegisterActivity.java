@@ -3,38 +3,25 @@ package com.hudipo.pum_indomaret.activities;
 
 //import android.app.ProgressDialog;
 
-import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
+import com.bumptech.glide.Glide;
 import com.hudipo.pum_indomaret.R;
 import com.hudipo.pum_indomaret.api.RetrofitCliect;
 import com.hudipo.pum_indomaret.model.DefaultResponse;
 
 import com.hudipo.pum_indomaret.storage.SharedPrefManager;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import javax.xml.transform.Result;
-
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -42,12 +29,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText et_pass_regis;
     private EditText et_pin_regis;
     private CardView cdv_regis;
+    ImageView imgPreview;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        imgPreview = findViewById(R.id.imageViewReg);
+        Glide.with(this).load(R.drawable.pums).into(imgPreview);
 
         et_emp_num_regis = (EditText) findViewById(R.id.et_emp_num_regis);
         et_pass_regis = (EditText) findViewById(R.id.et_pass_regis);
