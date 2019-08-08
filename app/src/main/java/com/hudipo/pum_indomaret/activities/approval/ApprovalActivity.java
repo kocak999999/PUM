@@ -29,6 +29,7 @@ public class ApprovalActivity extends AppCompatActivity implements BottomNavigat
         setContentView(R.layout.activity_approval);
 
 
+
         menu_bottom_approval = (BottomNavigationView)findViewById(R.id.bottom_menu_approval);
         menu_bottom_approval.setOnNavigationItemSelectedListener(this);
 //        rcv_approval = (RecyclerView) findViewById(R.id.rcv_approval);
